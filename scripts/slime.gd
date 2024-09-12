@@ -18,3 +18,9 @@ func _process(delta):
 		animated_sprite.flip_h = false
 
 	position.x += direction * SPEED * delta
+
+
+func _on_hitbox_body_entered(body):
+	print("i'm triggered")
+	if body is Player:
+		queue_free()
