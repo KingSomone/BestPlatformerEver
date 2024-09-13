@@ -74,7 +74,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qsbs0"]
-size = Vector2(12, 14)
+size = Vector2(12, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0y7qy"]
 size = Vector2(10, 2)
@@ -85,15 +85,14 @@ script = ExtResource("1_c3o37")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vdlsr")
-animation = &"hit"
 autoplay = "default"
-frame_progress = 0.202818
+frame_progress = 0.798437
 
 [node name="Killzone" parent="AnimatedSprite2D" instance=ExtResource("2_eh4o8")]
 position = Vector2(0, -12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Killzone"]
-position = Vector2(0, 17)
+position = Vector2(0, 17.5)
 shape = SubResource("RectangleShape2D_qsbs0")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
@@ -108,7 +107,7 @@ target_position = Vector2(-10, 0)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(0, -3)
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_0y7qy")
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
